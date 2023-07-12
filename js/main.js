@@ -1,21 +1,16 @@
-/*------------ constants ------------*/
-
-
-
-
-
 /*----- app's state (variables) -----*/
 let field = document.querySelector('.field')
 let width = 10;
 let squares = [];
 // Choose how many bombs here - may change later
-let bombAmount = 20;
+let bombAmount = 15;
 let gameOver = false;
+let flags = 0;
 
 
 
-/*---- cached element references ----*/
-
+/*--------- event listeners ---------*/
+const resetBtn = document.querySelector('button');
 
 
 
@@ -49,6 +44,12 @@ function loadField() {
         square.addEventListener('click', function(event) {
             click(square);
         })
+
+        // Right click to add flags using context menu
+        square.oncontextmenu = function(event) {
+          event.preventDefault();
+          placeFlag(square);
+        }
     }
 
     // Add numbers that correspond to how many adjacent
@@ -77,6 +78,7 @@ function loadField() {
 
         }
     }
+    renderResetBtn();
 }
 // Invoking function
 loadField();
@@ -163,3 +165,43 @@ function checkSquare(square, currentId) {
     // Adding 10ms of time
     }, 10)
 }
+
+
+// Adding flag function
+function placeFlag(square) {
+  if (gameOver) return;
+  if (!square.classList.contains('checked') && (flags < bombAmount)) {
+    if (!square.classList.contains('flag')) {
+      square.classList.add('flag');
+      square.innerHTML = '🚩';
+      flags++;
+      winCheck();
+    } else {
+      square.classList.remove('flag');
+      square.innerHTML = '';
+      flags --;
+    }
+  }
+}
+
+
+
+// Win condition checking
+function winCheck() {
+  let matches = 0;
+  for (let i = 0; i < squares.length; i++) {
+    if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
+      matches ++
+    }
+    if (matches === bombAmount) {
+      alert('YOU WIN! CONGRATULATIONS!');
+      gameOver = true;
+    }
+  }
+}
+
+
+// // Render reset button when game is over
+// function renderResetBtn() {
+//   resetBtn.style.visibility = gameOver ? 'visible' : 'hidden';
+// }

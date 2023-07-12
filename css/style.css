@@ -1,6 +1,34 @@
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    margin-top: 12vmin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5vmin;
+    letter-spacing: 0.5vmin;
+}
+
+button {
+    margin-top: 3vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 4vmin;
+    border: 0.1vmin solid grey;
+    color: black;
+}
+
+button:hover {
+    color: white;
+    background-color: darkgrey;
+    transition: background-color 70ms ease-in;
 }
 
 .field {
@@ -8,12 +36,13 @@
     width: 600px;
     display: flex;
     flex-wrap: wrap;
-    background-color: lightgrey;
+    background-color: darkgrey;
 }
 
 .field>div {
     height: 60px;
     width: 60px;
+    border: 1px solid black;
 }
 
 .bomb {
@@ -21,5 +50,5 @@
 }
 
 .checked {
-    background-color: white;
+    background-color: lightgrey;
 }
