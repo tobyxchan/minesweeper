@@ -7,7 +7,7 @@
 <br>
 
 <h2>Layout</h2>
-![Minesweeper](https://file%252B.vscode-resource.vscode-cdn.net/Users/tobychantharasy/Desktop/Screenshot%25202023-07-13%2520at%25202.38.17%2520pm.png?version%253D1689223121073)
+![Screenshot 2023-07-13 at 2 38 17 pm](https://github.com/tobyxchan/minesweeper/assets/137049136/215c783f-4982-4882-87fb-ea5455b269fb)
 
 <br>
 <h2>Technologies Used</h2>
