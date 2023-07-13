@@ -78,7 +78,6 @@ function loadField() {
 
         }
     }
-    renderResetBtn();
 }
 // Invoking function
 loadField();
@@ -173,7 +172,7 @@ function placeFlag(square) {
   if (!square.classList.contains('checked') && (flags < bombAmount)) {
     if (!square.classList.contains('flag')) {
       square.classList.add('flag');
-      square.innerHTML = '🚩';
+      square.innerHTML = '❌ ';
       flags++;
       winCheck();
     } else {
@@ -199,9 +198,3 @@ function winCheck() {
     }
   }
 }
-
-
-// // Render reset button when game is over
-// function renderResetBtn() {
-//   resetBtn.style.visibility = gameOver ? 'visible' : 'hidden';
-// }

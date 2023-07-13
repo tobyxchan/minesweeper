@@ -3,9 +3,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    background-color: #C5DFF8;
+}
+
 body {
     display: flex;
-    margin-top: 12vmin;
+    margin-top: 10vmin;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -14,6 +18,15 @@ body {
 h1 {
     font-size: 5vmin;
     letter-spacing: 0.5vmin;
+    margin-bottom: 0.5vmin;
+    color: #090580;
+}
+
+h3 {
+    margin-bottom: 2vmin;
+    text-align: center;
+    letter-spacing: 0.1vmin;
+    color: #7895CB;
 }
 
 button {
@@ -22,12 +35,13 @@ button {
     font-size: 2vmin;
     border-radius: 4vmin;
     border: 0.1vmin solid grey;
-    color: black;
+    background-color: #7895CB;
+    color: white;
 }
 
 button:hover {
     color: white;
-    background-color: darkgrey;
+    background-color: navy;
     transition: background-color 70ms ease-in;
 }
 
@@ -36,19 +50,31 @@ button:hover {
     width: 600px;
     display: flex;
     flex-wrap: wrap;
-    background-color: darkgrey;
+    background-color: #1B6B93;
 }
 
 .field>div {
     height: 60px;
     width: 60px;
-    border: 1px solid black;
+    border: 1px solid aliceblue;
 }
 
 .bomb {
-    background-color: darkgrey;
+    background-color: #1B6B93;
 }
 
 .checked {
-    background-color: lightgrey;
+    background-color: #C2DEDC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #090580;
+}
+
+.flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
