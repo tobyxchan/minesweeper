@@ -7,7 +7,7 @@
 <br>
 
 <h2>Layout</h2>
-![Screenshot 2023-07-13 at 2 38 17 pm](https://github.com/tobyxchan/minesweeper/assets/137049136/215c783f-4982-4882-87fb-ea5455b269fb)
+<image src="https://imgur.com/a/y57TbYa"/>
 
 <br>
 <h2>Technologies Used</h2>
