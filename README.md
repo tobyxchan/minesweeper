@@ -6,9 +6,6 @@
 <p>Created as part of my Software Engineering course, my version mirrors the classic look of the game, in a blue color scheme instead of the typical grey Windows theme. Please enjoy!</p>
 <br>
 
-<h2>Layout</h2>
-<image src="https://imgur.com/a/y57TbYa"/>
-
 <br>
 <h2>Technologies Used</h2>
 <p>- HTML</p>
